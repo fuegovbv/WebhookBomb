@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Discord Webhook Bomb - @Fuego</title>
+  <meta name="author" content="Zua">
+  <meta name="description" content="Discord Webhook Bomb - @Fuego">
+  <meta name="keywords" content="Discord Webhook Bomb - @Fuego">
+  <meta name="title" content="Discord Webhook Bomb - @Fuego">
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <style>
+    /* General body styles */
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding-top: 20px; /* Adjusted top padding */
+    }
+
+    /* Header styles */
+    #header {
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: #030303; /* Tomato color for a cartoonish feel */
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    /* Container styles */
+    #container {
+      background-color: #000000;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    /* Input fields */
+    input[type="text"] {
+      background-color: #000000;
+      color: #fff;
+      border: 2px solid #000000;
+      padding: 12px; /* Increased padding for larger input */
+      width: 80%;
+      border-radius: 8px;
+      margin: 10px 0;
+      transition: all 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #00bfff;
+      outline: none;
+    }
+
+    /* Button styles */
+    button {
+      background-color: #000000;
+      color: #fff;
+      font-size: 22px; /* Larger font size */
+      padding: 18px 28px; /* Increased padding for larger button */
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      width: 85%;
+      margin: 15px 0;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #000000;
+    }
+
+    button:active {
+      background-color: #020000;
+    }
+
+    /* Log text */
+    #log {
+      color: #030000;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+
+    /* Style for ASCII art */
+    pre {
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      color: #000000;
+      background: transparent;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      line-height: 1.5;
+      display: block;
+      max-width: 100%; /* Ensure it fits the container */
+      margin-top: 20px;
+    }
+
+    /* Footer styles */
+    #footer {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      color: #000000;
+      font-size: 14px;
+      text-align: right;
+    }
+
+    #footer a {
+      color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #footer a:hover {
+      color: #000000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="header">
+    <h1>Webhook Bomb - @Fuego</h1>
+  </div>
+
+  <div id="container">
+    <input type="text" id="link" placeholder="Webhook URL :">
+    <input type="text" id="username" placeholder="Bot Username :">
+    <input type="text" id="avatar" placeholder="Avatar URL :">
+    <input type="text" id="content" placeholder="Message :">
+    <button id="btn">Spam Webhook</button>
+
+    <!-- ASCII Art -->
+    <pre id="ascii-art">    
+
+          ██████████          
+      ████▒▒▒▒▒▒▒▒▒▒████      
+    ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██    
+  ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██  
+  ██▒▒▒▒██▒▒▒▒▒▒▒▒▒▒██▒▒▒▒██  
+██▒▒▒▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒▒▒▒██
+██▒▒▒▒▒▒▒▒▒▒██▒▒██▒▒▒▒▒▒▒▒▒▒██
+██▒▒▒▒▒▒▒▒████▒▒████▒▒▒▒▒▒▒▒██
+██▒▒▒▒▒▒▒▒████▒▒████▒▒▒▒▒▒▒▒██
+██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██
+  ██▒▒▒▒▒▒▒▒██████▒▒▒▒▒▒▒▒██  
+  ██▒▒▒▒▒▒██▒▒▒▒▒▒██▒▒▒▒▒▒██  
+    ██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒██    
+      ████▒▒▒▒▒▒▒▒▒▒████      
+          ██████████          
+    </pre>
+
+    <p id="log"></p>
+  </div>
+
+  <!-- Footer with Discord link and Fuego text -->
+  <div id="footer">
+    <p><a href="https://discord.gg/leakdata" target="_blank">Rejoins Mon Discord</a></p>
+    <p>@usrrick sur DISCORD @2025</p>
+  </div>
+
+  <script src="jquery.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+
+* {
+    text-align: center;
+    color: #000000c9;
+    font-family: "Arial Black", Gadget, sans-serif"
+    
+}
+
+body {
+    background: url('https://cdn.discordapp.com/attachments/1339170044105592864/1339177741198819360/QKaojPx.jpg?ex=67adc5f6&is=67ac7476&hm=e2e175e273b73ea003c50e85518663acef205ea013e3db288d10a487e32e24fa&');
+
+#container {
+
+    background-image:url('https://cdn.discordapp.com/attachments/1339170044105592864/1339177741198819360/QKaojPx.jpg?ex=67adc5f6&is=67ac7476&hm=e2e175e273b73ea003c50e85518663acef205ea013e3db288d10a487e32e24fa&');
+    opacity: 1;
+ 
+}
+
+
+#header {
+    text-align: center;
+    margin-top: 47px;
+    margin: auto;
+    font-size: 39px;
+    color: rgb(0, 0, 0)
+
+}
+
+
+.center-align {
+    text-align: center;
+}
+
+p {
+    font-family: "Arial Black, Gadget, sans-serif";
+    font-size: 27px;
+}
+
+a, a:visited {
+    color: rgb(3, 0, 0)
+}
+
+#link, #username, #content, #avatar {
+    font-size: 25px;
+    background-color: #000000;
+    width: 75%;
+    padding: 20px;
+    border: 2px solid #838383c9;
+}
+
+#btn {
+    width: 35%;
+    font-size: 25px;
+    color: #838383c9;
+    margin-top: 25px;
+    padding: 17px;
+    background-color: #000000;
+    border: 2px solid #838383c9;
+}
+
+#btn:hover { 
+    background-color: #000000;
+}
+
+#log {
+    text-align: center;
+    width: 5%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
